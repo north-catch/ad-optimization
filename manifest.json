@@ -1,7 +1,7 @@
 {
-  "name": "My App",
-  "short_name": "My App",
-  "description": "My App description",
+  "name": "Ad Optimization",
+  "short_name": "Ad Optimization",
+  "description": "Optimize ad campaigns",
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#3f51b5",
