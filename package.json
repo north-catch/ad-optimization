@@ -8,7 +8,7 @@
   "repository": "Polymer/pwa-starter-kit",
   "scripts": {
     "start": "polymer serve",
-    "build": "npm run build:prpl-server && npm run build:static && build:firebase",
+    "build": "npm run build:firebase",
     "build:prpl-server": "polymer build --auto-base-path && gulp prpl-server",
     "build:static": "polymer build",
     "build:firebase": "polymer build --auto-base-path && gulp firebase",
