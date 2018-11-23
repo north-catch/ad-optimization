@@ -1,9 +1,17 @@
 # ad-optimization
 
+## Build and deploy
+
 To build
 
 ```
 npm run build
+```
+
+To serve the built output
+
+```
+npm run serve
 ```
 
 To deploy
@@ -11,6 +19,8 @@ To deploy
 ```
 firebase deploy
 ```
+
+## Development
 
 To serve locally
 
