@@ -9,7 +9,7 @@
 - create a project
 - enable google authentication
 - create a firestore database
-- Blaze or Flame pricing plans to support external network requests from cloud functions (to Shopify, etc)
+- Blaze or Flame pricing plan to support external network requests from cloud functions (to Shopify, etc)
 
 ## Build and deploy
 
