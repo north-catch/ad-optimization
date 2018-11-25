@@ -1,20 +1,16 @@
 {
-  "name": "ad-optimization",
+  "name": "automation",
   "version": "1.0.0",
   "contributors": [
-    "The Polymer Authors"
+    "The Polymer Authors",
+    "Peter Halliday"
   ],
   "license": "BSD-3-Clause",
   "repository": "Polymer/pwa-starter-kit",
   "scripts": {
-    "start": "polymer serve",
+    "start": "firebase serve",
     "build": "npm run build:firebase",
-    "build:prpl-server": "polymer build --auto-base-path && gulp prpl-server",
-    "build:static": "polymer build",
-    "build:firebase": "polymer build --auto-base-path && gulp firebase",
-    "serve": "npm run serve:prpl-server",
-    "serve:prpl-server": "prpl-server --root server/build",
-    "serve:static": "polymer serve --port 5000 build/es5-bundled",
+    "deploy": "firebase deploy",
     "test": "npm run test:unit && npm run test:integration",
     "test:integration": "mocha test/integration --timeout=10000",
     "test:unit": "polymer test --module-resolution=node --npm",

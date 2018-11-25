@@ -1,7 +1,7 @@
 {
-  "name": "Ad Optimization",
-  "short_name": "Ad Optimization",
-  "description": "Optimize ad campaigns",
+  "name": "Automation",
+  "short_name": "Automation",
+  "description": "North Catch automation tools",
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#3f51b5",

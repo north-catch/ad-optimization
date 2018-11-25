@@ -23,22 +23,16 @@ npm run build
 To serve the built output
 
 ```
-npm run serve
+npm start
 ```
 
 To deploy
 
 ```
-firebase deploy
+npm run deploy1
 ```
 
 ## Development
-
-To serve locally
-
-```
-npm start
-```
 
 To run tests (did not pass when creating template and may not be maintained)
 
