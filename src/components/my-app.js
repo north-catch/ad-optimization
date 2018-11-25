@@ -19,6 +19,9 @@ import { updateMetadata } from 'pwa-helpers/metadata.js';
 // This element is connected to the Redux store.
 import { store } from '../store.js';
 
+// This element is connected to the firebase instance.
+import { ui } from '../firebase.js';
+
 // These are the actions needed by this element.
 import {
   navigate,
@@ -184,6 +187,8 @@ class MyApp extends connect(store)(LitElement) {
       <app-toolbar class="toolbar-top">
         <button class="menu-btn" title="Menu" @click="${this._menuButtonClicked}">${menuIcon}</button>
         <div main-title>${this.appTitle}</div>
+        <div id="firebaseui-auth-container"></div>
+        <div id="firebaseui-auth-loader-container">Loading...</div>
       </app-toolbar>
 
       <!-- This gets hidden on a small screen-->
@@ -239,6 +244,7 @@ class MyApp extends connect(store)(LitElement) {
     // To force all event listeners for gestures to be passive.
     // See https://www.polymer-project.org/3.0/docs/devguide/settings#setting-passive-touch-gestures
     setPassiveTouchGestures(true);
+    ui('firebaseui-auth-container', 'firebase-auth-loader-container');
   }
 
   firstUpdated() {
