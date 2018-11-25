@@ -1,20 +1,29 @@
+const HOST_URL = '<YOUR HOST URL HERE>';
+const RENDERTRON_ENDPOINT = 'https://render-tron.appspot.com/render';
+const DATABASE_URL = 'https://north-catch-automation.firebaseio.com/';
+
+const admin = require('firebase-admin');
+admin.initializeApp({
+  databaseURL: DATABASE_URL,
+});
+
 const functions = require('firebase-functions');
-const prpl = require('prpl-server');
 const express = require('express');
-const rendertron = require('rendertron-middleware');
+const cors = require('cors')({origin: true});
+const cookieParser = require('cookie-parser')();
+const session = require('./middleware/session-firebase')(admin);
+const validateFirebaseIdToken = require('./middleware/validate-firebase-id-token')(admin);
+const rendertron = require('./middleware/rendertron')(RENDERTRON_ENDPOINT, HOST_URL);
+const defaultRoute = require('./routes/default');
 
 const app = express();
 
-const rendertronMiddleware = rendertron.makeMiddleware({
-  proxyUrl: 'https://render-tron.appspot.com/render',
-  injectShadyDom: true,
-});
+app.use(cors);
+app.use(cookieParser);
+app.use(session);
+app.use(validateFirebaseIdToken);
+app.use(rendertron);
 
-app.use((req, res, next) => {
-  req.headers['host'] = '<YOUR HOST URL HERE>';
-  return rendertronMiddleware(req, res, next);
-});
-
-app.get('/*', prpl.makeHandler('./build', require('./build/polymer.json')));
+app.get('/*', defaultRoute);
 
 exports.app = functions.https.onRequest(app);

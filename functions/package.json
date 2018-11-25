@@ -10,11 +10,17 @@
     "logs": "firebase functions:log"
   },
   "dependencies": {
+    "connect-session-firebase": "^5.13.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.5",
     "express": "^4.16.3",
-    "firebase-admin": "~6.0.0",
+    "express-session": "^1.15.6",
+    "firebase-admin": "^6.0.0",
     "firebase-functions": "^2.1.0",
     "prpl-server": "^1.2.0",
-    "rendertron-middleware": "^0.1.2"
+    "rendertron-middleware": "^0.1.2",
+    "shopify-api-node": "^2.16.0",
+    "shopify-token": "^3.0.2"
   },
   "devDependencies": {
     "eslint": "^4.12.0",

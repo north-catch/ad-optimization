@@ -1,4 +1,16 @@
-# ad-optimization
+# automation
+
+## TODO
+
+- deploy a rendertron instance (to google cloud platform?)
+- enable external requests from google functions (using auth tokens from shopify can only be done serverside)
+
+## Firebase dependencies
+
+- create a project
+- enable google authentication
+- create a firestore database
+- Blaze or Flame pricing plans to support external network requests from cloud functions (to Shopify, etc)
 
 ## Build and deploy
 
