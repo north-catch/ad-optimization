@@ -3,7 +3,6 @@
 ## TODO
 
 - deploy a rendertron instance (to google cloud platform?)
-- enable external requests from google functions (using auth tokens from shopify can only be done serverside)
 
 ## Firebase dependencies
 
