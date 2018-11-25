@@ -9,7 +9,7 @@
   "repository": "Polymer/pwa-starter-kit",
   "scripts": {
     "start": "firebase serve",
-    "build": "polymer build --auto-base-path && gulp firebase",
+    "build": "polymer build -v --auto-base-path && gulp firebase",
     "deploy": "firebase deploy",
     "test": "npm run test:unit && npm run test:integration",
     "test:integration": "mocha test/integration --timeout=10000",
